@@ -10,6 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2023_08_03_164253) do
+  #this schema is generated from the temp create_articles file when we run ~rake db:migrate
+  create_table "articles", force: :cascade do |t|
+    t.string "title", limit: 40, null: false
+    t.string "content", null: false
+    t.string "author", null: false
+    t.string "category", null: false
+    t.date "published_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
